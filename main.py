@@ -1,5 +1,12 @@
-a= """                                                                                                  
-              :                                   
+from src.adapter.PlaywrightAdapter import PlaywrightAdapter
+
+a = PlaywrightAdapter()
+aa = a.execute("Eu posso Toma Suco de abacaxota ?")
+print(aa.response)
+
+
+al = """ 
+             :                                   
              @@@             @@+                  
             @@@@@           @@@@                  
             @@@@@@         @@@@@@                 
@@ -25,6 +32,3 @@ a= """
             @@@@@@@@@@@@@@@@@@                    
            -@@@@@@@@@@@@@@@@@@@                                                                              
 """
-
-
-print(a)
