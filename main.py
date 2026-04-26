@@ -1,3 +1,6 @@
-from src.menuInit.initMenu import Menu
+import asyncio
 
-Menu()
+from src.App import App
+
+app = App()
+asyncio.run(app.bootstrap())

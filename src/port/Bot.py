@@ -1,6 +1,3 @@
-from src.Model.ResponseFromIA import ResponseFromIA
-
-
 class Bot:
-    def execute(text:str) -> ResponseFromIA:
+    async def execute(self, prompt: str):
         pass
