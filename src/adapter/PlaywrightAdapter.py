@@ -20,7 +20,7 @@ class PlaywrightAdapter(Bot):
             self.__playwright = await async_playwright().start()
             self.__context = await self.__playwright.chromium.launch_persistent_context(
                 self.__user_data_dir,
-                headless=False,
+                headless=True,
                 args=[
                     "--disable-blink-features=AutomationControlled",
                     "--no-sandbox",
@@ -44,7 +44,7 @@ class PlaywrightAdapter(Bot):
             await self.__sendButton()
             
             content = await self.__getResponseFromGemini()
-            exec_time = f"{time.time() - start_time:.2f}s"
+            exec_time = f"{time.time() - start_time:.2f}s" 
             
             return ResponseFromIA(response=content, time=exec_time, prompt=prompt)
         except Exception as e:
